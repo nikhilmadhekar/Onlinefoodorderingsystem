@@ -1,6 +1,13 @@
 Hello Nikhil, Mahesh and Tarun
 Hope you all are good ?
 This is start of our project, lets decide the scope and roles of our project. Thanks.
+<<<<<<< HEAD
 
 _____________________________________________________________________
 
+=======
+hii , mahesh from this side
+>>>>>>> 2dd82f06fdd00ed8e30b5e0c78dded1b611f48cb
+
+
+________________________ENOUGH !!! ________________________
