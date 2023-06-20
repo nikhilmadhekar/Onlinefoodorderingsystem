@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <title>EMPFORM  using AJAX JAVASCRIPT </title>
+    <head>
+        <script>
+                function makeRequest()
+                {
+                    ajax=createAjaxObject();
+                // if(ajax)
+                // alert("ajax obj created");
+                ajax.onreadystatechange=updatePage;
+
+                var url="http://localhost:9000/getname?empid="+document.f1.empid.value;
+                alert(url);
+
+                ajax.open('GET',url,true);
+
+                ajax.send(" ");
+
+                }
+
+                function updatePage()
+                {
+                    alert(ajax.readyState);
+                    if(ajax.readyState==4)
+                    {
+                        document.getElementById("msg").innerHTML=ajax.responseText;
+                    }
+                   
+
+                }
+
+
+
+                function createAjaxObject()
+                {
+                    if(window.XMLHttpRequest)
+                    try
+                    {
+                        //use non -ie way 
+                        var ajax=new XMLHttpRequest();
+                        return ajax;
+                    }
+                    catch(e)
+                    {
+                        try
+                        {
+                            //ie way
+                            var ajax=new ActiveXObject("Microsoft.XMLHTTP");
+                            return ajax;
+
+                        }
+                        catch(e)
+                        {
+                            alert("ajax not created");
+                        }
+                    }
+                }
+
+
+            
+
+            
+
+        </script>
+    </head>
+    <body>
+    <form name="f1">
+        ENTER EMPID:
+        <input type="number" name="empid" />
+
+        <input type="button" value="greet"
+        onclick="makeRequest()"/>
+    </form>
+    <div id="msg">......</div>
+    </body>
+</html>
