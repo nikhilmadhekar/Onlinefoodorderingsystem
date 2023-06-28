@@ -1,5 +1,7 @@
 var exp=require('express');
 var app=exp();
+var path=require('path');
+app.use(exp.static(path.join(__dirname,'Ajax')))
 
 var mysql=require('mysql2');
 var con=mysql.createConnection({
