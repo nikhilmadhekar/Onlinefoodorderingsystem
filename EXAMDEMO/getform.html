@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    
+</head>
+<body style="background: url(shiva1.jpg)no-repeat;background-attachment: fixed;">
+    <form action="http://localhost:9000/getDataTable" method="post">
+     
+        <table>
+                <tr>
+                  <td><label for="name">Enter Name: </label> </td>
+                  <td><input type="text" name="name" id="name" /> </td>
+                </tr>
+                <tr>
+                    <td><label for="bdate">Enter Birthdate: </label> </td>
+                    <td><input type="text" name="bdate" id="bdate" /> </td>
+                </tr>
+                <tr>
+                    <td><label for="emailid">Enter Emailid: </label> </td>
+                    <td><input type="emailid" name="emailid" id="emailid" /> </td>
+                </tr>
+                <tr>
+                    <td><label for="qualification">Enter Qualification: </label> </td>
+                    <td><input type="text" name="qualification" id="qualification" /> </td>
+                </tr>
+                <tr>
+                  <td><input type="submit" value="LOGIN" /> </td> 
+                  <td><input type="reset" value="CLEAR" /> </td>
+                </tr>
+        </table>    
+    </form>
+    <div id="table">.....</div>
+</body>
+</html>
